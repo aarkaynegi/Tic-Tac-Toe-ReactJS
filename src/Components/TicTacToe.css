@@ -1,23 +1,58 @@
 .board {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .square {
-    width: 100%;
-    height: 100%;
-    font-size: 32px;
-    font-weight: bold;
-  }
-  
-  .status {
-    margin-bottom: 10px;
-  }
-  
-  .reset {
-    display: block;
-    margin: 10px 0;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.square {
+  background-color: #fff;
+  border: 2px solid #333;
+  color: #333;
+  font-size: 40px;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.square:hover {
+  background-color: #eee;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.square.X {
+  color: #f00;
+}
+
+.square.O {
+  color: #00f;
+}
+
+.status {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.reset {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.reset:hover {
+  background-color: #555;
+}
+
+.reset:focus {
+  outline: none;
+}
